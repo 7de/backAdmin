@@ -1,0 +1,521 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+
+<![endif]-->
+<link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="static/h-ui.admin/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="static/modify/css/common.css" />
+<link rel="stylesheet" type="text/css" href="static/modify/css/style.css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>客户需求管理-云端</title>
+</head>
+<body>
+<div class="page-box-two bg-f2f2f2">
+	<!-- 面包屑 -->
+    <nav class="breadcrumb breadcrumb2"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt; 客户需求管理</nav>
+
+	<div class="box-content bg-fff">
+		<div class="box-tab">
+			<div class="slideTxtBox">
+				<div class="hd cl">
+					<ul class="f-l mr-20 mb-20">
+						<li class="on">待处理</li>
+						<li>处理中</li>
+						<li>已处理</li>
+					</ul>
+					<div class="f-l mr-40 mb-20">
+						<form action="" class="">
+							<label for="" class="f-14">需求类型：</label>
+							<select style="width: 200px;height: 44px;" class="select radius" name="" id="">
+								<option class="size-XL" value="0">全部</option>
+								<option value="1">文案策划</option>
+								<option value="2">品牌推广</option>
+								<option value="3">财务规范</option>
+								<option value="4">基金托管</option>
+								<option value="5">资金募集</option>
+								<option value="6">法律意见书</option>
+								<option value="7">税务筹划</option>
+								<option value="8">产品路演</option>
+							</select>
+						</form>
+					</div>
+					<div class="search-box f-l cl mb-20">
+						<input class="input-text radius" type="text" name="search-con">
+						<input type="button" name="file-1" class="search-btn" value="搜索">
+					</div>
+				</div>
+				<div class="bd mt-30">
+					<div class="bd-box" id="demand-pending" style="display: block">
+						<table class="table table-border table-bordered table-hover">
+							<thead class="text-c">
+								<tr>
+									<th width="30">序号</th>
+									<th width="50">联系人</th>
+									<th width="100">联系方式</th>
+									<th width="100">需求类型</th>
+									<th>需求内容</th>
+									<th>公司名称</th>
+									<th>发布时间</th>
+									<th width="150">操作</th>
+								</tr>
+							</thead>
+							<tbody class="text-c">
+								<tr>
+									<td><span>1</span></td>
+									<td>陈正1</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>2</span></td>
+									<td>陈正2</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>3</span></td>
+									<td>陈正3</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>4</span></td>
+									<td>陈正4</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>5</span></td>
+									<td>陈正5</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>6</span></td>
+									<td>陈正6</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>7</span></td>
+									<td>陈正7</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>8</span></td>
+									<td>陈正8</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td><span>9</span></td>
+									<td>陈正9</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="td-manage">
+										<a href="user-demand-info.html">查看</a>
+										<a class="ml-10" href="javascript:;" onclick="del_list(this,'1533')">删除</a>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<div class="bd-box" id="demand-process">
+						<table class="table table-border table-bordered table-hover">
+							<thead>
+							<tr>
+								<th width="30">序号</th>
+								<th width="50">联系人</th>
+								<th width="100">联系方式</th>
+								<th width="100">需求类型</th>
+								<th >需求内容</th>
+								<th>公司名称</th>
+								<th>发布时间</th>
+								<th width="150">操作</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandAlready" href="javascript:;">已处理</a>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+					<div class="bd-box" id="demand-already">
+						<table class="table table-border table-bordered table-hover">
+							<thead>
+								<tr>
+									<th width="30">序号</th>
+									<th width="50">联系人</th>
+									<th width="100">联系方式</th>
+									<th width="100">需求类型</th>
+									<th>需求内容</th>
+									<th>公司名称</th>
+									<th width="100">发布时间</th>
+									<th width="150">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>陈正</td>
+									<td>15815479895</td>
+									<td>品牌推广</td>
+									<td><p>需求</p></td>
+									<td><p>公司名称</p></td>
+									<td>2017-06-08 11:26</td>
+									<td class="f-14 td-manage">
+										<a class="demandDel" href="javascript:;">删除</a>
+									</td>
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box-footer">
+		<p>©2010-2017 云端 · 私募荟 版权所有</p>
+	</div>
+</div>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+<script type="text/javascript" src="static/modify/js/common.js"></script>
+
+<script type="text/javascript">
+$(".slideTxtBox").slide({trigger:"click"});
+/* 删除 */
+function del_list(obj,id){
+    layer.open({
+          type: 1 ,
+          area: ['460px'],
+          title: ' ',
+          maxmin: false,
+          anim: 1 ,
+          content: '<div class="layer-tip"><p class="p3">确定删除此需求信息？</p></div>'
+          ,btn: ['确认', '取消']
+          ,yes: function(index){
+            $(obj).parents('tr').remove();
+            layer.close(index);
+            layer.msg('已删除！',{time:1000});
+          }
+        });
+}
+</script>
+</body>
+</html>

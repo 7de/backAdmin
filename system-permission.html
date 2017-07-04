@@ -1,0 +1,467 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+
+<![endif]-->
+<link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="static/h-ui.admin/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="static/modify/css/common.css" />
+<link rel="stylesheet" type="text/css" href="static/modify/css/style.css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>权限管理-云端</title>
+</head>
+<body>
+<div class="page-box-two bg-f2f2f2">
+	<!-- 面包屑 -->
+	<nav class="breadcrumb breadcrumb2"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统设置 <span class="c-gray en">&gt; 权限管理</nav>
+
+	<div class="box-content bg-fff">
+		<div class="box-top cl">
+			<div class="search-box cl f-l">
+				<input class="input-text radius" type="text" name="search-con" placeholder="输入管理员账号/姓名">
+				<input type="button" name="file-1" class="search-btn" value="搜索">
+			</div>
+			<button class="btn btn-orange-bg radius f-r" type="submit" onclick="permissioin_add()">添加</button>
+		</div>
+		
+		<div class="box-table mt-30">
+			<table class="table table-border table-bordered table-hover" id="permission_table">
+				<thead class="text-c">
+					<tr>
+						<th>序列</th>
+						<th>管理员账号</th>
+						<th>真实姓名</th>
+						<th>手机</th>
+						<th>职位</th>
+						<th>创建日期</th>
+						<th>状态</th>
+						<th width="250">操作</th>
+					</tr>
+				</thead>
+				<tbody class="text-c">
+					<tr>
+						<td>1</td>
+						<td class="t-account">001</td>
+						<td class="t-name">maggie</td>
+						<td class="t-phone">18987654321</td>
+						<td>超级管理员</td>
+						<td>2017-06-20</td>
+						<td class="t-state">未锁定</td>
+						<td class="td-manage">
+							<a href="javascript:;" onclick="permission_edit(this,'001')">编辑</a>
+							<a href="system-permission-set.html" class="ml-10">权限</a>
+							<a href="javascript:;" class="ml-10" onclick="permission_lock(this,'001')">锁定</a>
+							<a href="javascript:;" class="ml-10" onclick="permission_reset(this,'001')">重置密码</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td class="t-account">002</td>
+						<td class="t-name">maggie</td>
+						<td class="t-phone">18987654321</td>
+						<td>客服</td>
+						<td>2017-06-20</td>
+						<td class="t-state">未锁定</td>
+						<td class="td-manage">
+							<a href="javascript:;" onclick="permission_edit(this,'002')">编辑</a>
+							<a href="system-permission-set.html" class="ml-10">权限</a>
+							<a href="javascript:;" class="ml-10" onclick="permission_lock(this,'002')">锁定</a>
+							<a href="javascript:;" class="ml-10" onclick="permission_reset(this,'002')">重置密码</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td class="t-account">003</td>
+						<td class="t-name">maggie</td>
+						<td class="t-phone">18987654321</td>
+						<td>财务</td>
+						<td>2017-06-20</td>
+						<td class="t-state">未锁定</td>
+						<td class="td-manage">
+							<a href="javascript:;" onclick="permission_edit(this,'003')">编辑</a>
+							<a href="system-permission-set.html" class="ml-10">权限</a>
+							<a href="javascript:;" class="ml-10" onclick="permission_lock(this,'003')">锁定</a>
+							<a href="javascript:;" class="ml-10" onclick="permission_reset(this,'003')">重置密码</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	<div class="box-footer">
+		<p>©2010-2017 云端 · 私募荟 版权所有</p>
+	</div>
+</div>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="static/modify/js/common.js"></script> 
+<script type="text/javascript">
+
+/* 权限-添加 */
+function permissioin_add(){
+	var targetObj = $('#permission_table tbody tr').last(),
+	    addOrder = parseInt(targetObj.find('td').eq(0).text()),
+	    addAccount = parseInt(targetObj.find('.t-account').text());
+	    if(addAccount>10){
+	    	if(addAccount>99){
+	    		addAccount++;
+	    	}else{
+	    		addAccount++;
+	    		addAccount = '0'+addAccount;
+	    	}
+	    }else{
+	    	addAccount++;
+	    	addAccount = '00'+addAccount;
+	    }
+
+	var layCon = '<form class="layui-form bomb-form" action="" method="" id="addForm">\
+				      <div class="layui-form-item" style="margin-bottom:-25px;">\
+					      <label class="layui-form-label size-L" for="account">管理员账号：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="account" placeholder="" autocomplete="off" readonly value="'+ addAccount +'" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item" style="margin-bottom:-25px;">\
+					      <label class="layui-form-label size-L" for="grade">管理员等级：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="grade" placeholder="" autocomplete="off" readonly value="普通管理员" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item" style="margin-bottom:-15px;">\
+					      <label class="layui-form-label size-L" for="power">权限：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="grade" placeholder="" autocomplete="off" readonly value="稍后设置" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="power">职位：</label>\
+					      <div class="layui-input-block size-L">\
+						      <select class="layui-select radius" name="power">\
+							    <option value="0">超级管理员</option>\
+							    <option value="1">财务</option>\
+							    <option value="2">客户</option>\
+							  </select>\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="name">真实姓名：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="name" placeholder="请输入真实姓名" autocomplete="off" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="phone">手机号码：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="phone" placeholder="请输入手机号码" autocomplete="off" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <p class="error-box error-box-edit"></p>\
+				    </form>';
+
+				    layer.open({
+					  type: 1 
+					  ,area: ['480px']
+					  ,title: '添加管理员'
+					  ,maxmin: false
+					  ,anim: 1 
+					  ,move:false
+					  ,content: layCon
+					  ,btn: ['确认', '取消']
+					  ,yes: function(index){
+					  	$('#addForm').validate({
+					  		rules:{
+					  			name:'required',
+					  			phone:{
+					  				required:true,
+					  				isMobile:true
+					  			}
+					  		},
+					  		messages:{
+					  			name:'请输入姓名',
+					  			phone:{
+					  				required:'请输入手机号码',
+					  				isMobile:'请输入正确手机号码格式'
+					  			}
+					  		},
+					  		groups:{
+								edit:'name phone'
+							},
+							errorPlacement:function(error,element){
+								$('.error-box-edit').append(error);
+							},
+							onfocusout:function(element){
+								$(element).valid();
+							},
+							onsubmit:false,
+							focusCleanup:true
+
+					  	});
+					  	if($('#addForm').valid()){
+					  		layer.close(index);
+					  		layer.open({
+							  type: 1
+							  ,area: ['460px']
+							  ,title: ''
+							  ,maxmin: false
+							  ,anim: 1 
+							  ,move:false
+							  ,content: '<div class="layer-tip layer-tip2"><i class="ico-global ico-ok"></i><p class="p2 mt-35">添加成功！</p></div>'
+							  ,btn: ['确认']
+							  ,yes: function(index){layer.close(index);}
+							});
+					  	}
+					  	
+					  }
+					});
+
+
+
+}
+
+/*权限-编辑*/
+function permission_edit(obj,id){
+	var eAccount = $(obj).parents('tr').find('.t-account').text(),
+	    ePower = $(obj).parents('tr').find('td').eq(0).text(),
+	    eName = $(obj).parents('tr').find('.t-name').text(),
+	    ePhone = $(obj).parents('tr').find('.t-phone').text();
+	var layCon='<form class="layui-form bomb-form" action="" method="" id="editForm">\
+				      <div class="layui-form-item" style="margin-bottom:-25px;">\
+					      <label class="layui-form-label size-L" for="account">管理员账号：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="account" placeholder="" autocomplete="off" readonly value="'+ eAccount +'" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item" style="margin-bottom:-25px;">\
+					      <label class="layui-form-label size-L" for="grade">管理员等级：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="grade" placeholder="" autocomplete="off" readonly value="普通管理员" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item" style="margin-bottom:-15px;">\
+					      <label class="layui-form-label size-L" for="power">权限：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="grade" placeholder="" autocomplete="off" readonly value="稍后设置" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="power">职位：</label>\
+					      <div class="layui-input-block size-L">\
+						      <select class="layui-select radius" name="power">\
+							    <option value="0">超级管理员</option>\
+							    <option value="1">财务</option>\
+							    <option value="2">客户</option>\
+							  </select>\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="name">真实姓名：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="name" placeholder="请输入真实姓名" autocomplete="off" value="'+ eName +'" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="phone">手机号码：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="text" name="phone" placeholder="请输入手机号码" autocomplete="off" value="'+ ePhone +'" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <p class="error-box error-box-edit"></p>\
+				    </form>';
+	layer.open({
+		  type: 1 
+		  ,area: ['480px']
+		  ,title: '编辑管理员'
+		  ,maxmin: false
+		  ,anim: 1 
+		  ,move:false
+		  ,content: layCon
+		  ,btn: ['确认', '取消']
+		  ,yes: function(index){
+		  	$('#editForm').validate({
+		  		rules:{
+		  			name:'required',
+		  			phone:{
+		  				required:true,
+		  				isMobile:true
+		  			}
+		  		},
+		  		messages:{
+		  			name:'请输入姓名',
+		  			phone:{
+		  				required:'请输入手机号码',
+		  				isMobile:'请输入正确手机号码格式'
+		  			}
+		  		},
+		  		groups:{
+					edit:'name phone'
+				},
+				errorPlacement:function(error,element){
+					$('.error-box-edit').append(error);
+				},
+				onfocusout:function(element){
+					$(element).valid();
+				},
+				onsubmit:false,
+				focusCleanup:true
+
+		  	});
+		  	if($('#editForm').valid()){
+		  		layer.close(index);
+		  		layer.open({
+				  type: 1
+				  ,area: ['460px']
+				  ,title: ''
+				  ,maxmin: false
+				  ,anim: 1 
+				  ,move:false
+				  ,content: '<div class="layer-tip layer-tip2"><i class="ico-global ico-ok"></i><p class="p2 mt-35">修改成功！</p></div>'
+				  ,btn: ['确认']
+				  ,yes: function(index){layer.close(index);}
+				});
+		  	}
+		  	
+		  }
+		});
+	
+}
+/* 权限-锁定 */
+function permission_lock(obj,id){
+	var eState = $(obj).parents('tr').find('.t-state'),
+		msg = '';
+    	if(eState.text()=='未锁定'){
+    		msg = '锁定';
+    	}else{
+    		msg = '开启'
+    	};
+    	layer.open({
+			  type: 1
+			  ,area: ['460px']
+			  ,title: ' '
+			  ,maxmin: false
+			  ,anim: 1 
+			  ,content:'<div class="layer-tip"><p class="p3">确定将该账户'+ msg +'</p></div>'
+			  ,btn: ['确认','取消']
+			  ,yes: function(index){
+			  	if(msg=='锁定'){
+			  		$(obj).text('开启');
+			  		eState.text('已锁定')
+			  	}else{
+			  		$(obj).text('锁定');
+			  		eState.text('未锁定')
+			  	}
+			  	layer.close(index);
+			  	layer.msg('已'+msg+'！',{time:1000});
+			  }
+			});
+
+}
+/* 权限-重置密码 */
+function permission_reset(obj,id){
+	var layCon = '<form class="layui-form bomb-form" action="" method="" id="resetform">\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="newpass">新密码：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="password" name="newpass" id="newpass" placeholder="请输入密码" autocomplete="off" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <div class="layui-form-item">\
+					      <label class="layui-form-label size-L" for="checkpass">确认新密码：</label>\
+					      <div class="layui-input-block size-L">\
+						      <input type="password" name="checkpass" id="checkpass" placeholder="请确认密码" autocomplete="off" class="layui-input radius">\
+						  </div>\
+				      </div>\
+				      <p class="error-box error-box-reset"></p>\
+				    </form>';
+			layer.open({
+			  type: 1
+			  ,area: ['460px']
+			  ,title: '重置密码'
+			  ,maxmin: false
+			  ,anim: 1 
+			  ,move:false
+			  ,content:layCon
+			  ,btn: ['确认','取消']
+			  ,yes: function(index){
+					  	$('#resetform').validate({
+					  		rules:{
+								newpass:{
+									required:true,
+									rangelength:[6,20]
+								},
+								checkpass:{
+									required:true,
+									rangelength:[6,20],
+									equalTo: "#newpass"
+								}
+							},
+							messages:{
+								newpass:{
+									required:"请输入密码",
+									rangelength:"密码由6-20位字符组成（不含空格）"
+								},
+								checkpass:{
+									required:"请输入密码",
+									rangelength:"密码由6-20位字符组成（不含空格）",
+									equalTo:'两次密码输入不一致'
+								}
+							},
+							submitHandler:function(form){
+					            form.submit();
+							},
+							groups:{
+								reset:'newpass checkpass'
+							},
+							errorPlacement:function(error,element){
+								$('.error-box-reset').append(error);
+							},
+							onfocusout:function(element){
+								$(element).valid();
+							},
+							onsubmit:false,
+							focusCleanup:true
+					  	});
+
+					  	if($('#resetform').valid()){
+					  		layer.close(index);
+					  		layer.open({
+							  type: 1
+							  ,area: ['460px']
+							  ,title: ''
+							  ,maxmin: false
+							  ,anim: 1 
+							  ,move:false
+							  ,content: '<div class="layer-tip layer-tip2"><i class="ico-global ico-ok"></i><p class="p2 mt-35">修改成功！</p></div>'
+							  ,btn: ['确认']
+							  ,yes: function(index){layer.close(index);}
+							});
+					  	}
+				}
+			});
+
+}
+</script>
+</body>
+</html>

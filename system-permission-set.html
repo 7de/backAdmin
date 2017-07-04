@@ -1,0 +1,210 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+
+<![endif]-->
+<link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="static/h-ui.admin/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="static/modify/css/common.css" />
+<link rel="stylesheet" type="text/css" href="static/modify/css/style.css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>权限设置-云端</title>
+</head>
+<body>
+<div class="page-box-two bg-f2f2f2">
+	<!-- 面包屑 -->
+	<nav class="breadcrumb breadcrumb2"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统设置 <span class="c-gray en">&gt; 权限管理 <span class="c-gray en">&gt;</span>权限设置</nav>
+	<div class="box-content bg-fff">
+		<h3 class="text-c mb-40">操作权限分配</h3>
+		<div class="box-table">
+			<table class="table table-border table-bordered" id="set-table">
+				<thead>
+					<tr class="text-c">
+						<th>一级菜单</th>
+						<th>二级菜单</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-home">
+							    <label for="checkbox-home">首页</label>
+							</div>
+						</td>
+						<td><p class="c-999">所有相关运营数据显示</p></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-manager">
+							    <label for="checkbox-manager">平台内容管理</label>
+							</div>
+						</td>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-manager-banner">
+							    <label for="checkbox-manager-banner">PC-Banner管理</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-manager-templet">
+							    <label for="checkbox-manager-templet">合格投资者风险测评模板</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-manager-protocol">
+							    <label for="checkbox-manager-protocol">平台协议模板列表</label>
+							</div>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-user">
+							    <label for="checkbox-user">用户管理</label>
+							</div>
+						</td>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-user-list">
+							    <label for="checkbox-user-list">投资用户列表</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-user-list-no">
+							    <label for="checkbox-user-list-no">基金公司用户列表-未审核</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-user-list-yes">
+							    <label for="checkbox-user-list-yes">基金公司用户列表-已审核</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-user-view">
+							    <label for="checkbox-user-view">意见反馈</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-product">
+							    <label for="checkbox-product">产品配置</label>
+							</div>
+						</td>
+						<td><p class="c-999">产品配置</p></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-data">
+							    <label for="checkbox-data">基金数据导入</label>
+							</div>
+						</td>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-data-manager">
+							    <label for="checkbox-data-manager">基金经理信息数据</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-data-old">
+							    <label for="checkbox-data-old">过往业绩数据</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-data-account">
+							    <label for="checkbox-data-account">托管账户交易追踪数据</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-data-change">
+							    <label for="checkbox-data-change">投资标的变化追踪数据</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-data-schedule">
+							    <label for="checkbox-data-schedule">投资进度追踪数据</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-system">
+							    <label for="checkbox-system">系统设置</label>
+							</div>
+						</td>
+						<td>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-system-power">
+							    <label for="checkbox-system-power">权限管理</label>
+							</div>
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-system-log">
+							    <label for="checkbox-system-log">操作日志</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="check-box">
+							    <input type="checkbox" id="checkbox-all">
+							    <label for="checkbox-all">全选</label>
+							</div>
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+			<p class="mt-50 mb-20 text-c"><a href="javascript:;" class="btn btn-warning size-L radius" style="padding-left:30px;padding-right:30px;">保存</a><a href="system-permission.html" class="btn btn-default size-L radius ml-20" style="padding-left:30px;padding-right:30px;">返回</a></p>
+
+		</div>
+	</div>
+	<div class="box-footer">
+		<p>©2010-2017 云端 · 私募荟 版权所有</p>
+	</div>
+</div>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="static/modify/js/common.js"></script> 
+<script type="text/javascript">
+$(function(){
+	//全选
+	$("#checkbox-all").on('click',function(){ 
+	    if($(this).is(':checked')){ 
+	        $("input[type='checkbox']").prop('checked', true)
+	    }else{ 
+	        $("input[type='checkbox']").prop('checked', false)
+	    } 
+	  });
+	
+    //父级选中，子级全选
+	$('#set-table input[type="checkbox"]').on('click',function(){
+		if($(this).parents('tr').find('td:first input[type="checkbox"]').is(':checked')){
+			$(this).parents('td').siblings().find('input[type="checkbox"]').prop('checked', true);
+		}else{
+			$(this).parents('td').siblings().find('input[type="checkbox"]').prop('checked', false);
+		}
+	})
+	
+
+})
+</script>
+</body>
+</html>

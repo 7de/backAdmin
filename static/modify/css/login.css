@@ -1,0 +1,71 @@
+.header{
+	border-bottom:1px solid #eee;
+	box-shadow: 0 1px 10px rgba(0,0,0,.1)
+}
+.logo{
+	height:80px;
+	line-height: 80px;
+}
+.logo .ico-log{
+	margin-top:13px;
+}
+.login{
+	position: relative;
+	width:100%;
+	min-height:400px;
+}
+.login-box{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:480px;
+	border-radius: 6px;
+}
+.login-form{
+	padding:30px 70px 10px;
+}
+.login-form > h3{
+	text-align: center;
+	font-size:18px;
+	padding-bottom:50px;
+}
+.form-group{
+	display: block;
+	margin-bottom:35px;
+}
+.form-control{
+	box-sizing: border-box;
+	width:100%;
+	font-size: 16px;
+	height:54px;
+	border:1px solid #b3b3b3;
+	border-radius: 4px;
+}
+.form-control:focus{
+	border-color:#119dee;
+}
+.form-icon{
+	position: relative;
+}
+.form-icon > .form-control{
+	padding-left:58px;
+}
+.form-icon > .iconlist{
+	position: absolute;
+	top:10px;
+	left:19px;
+}
+.btn{
+	width:100%;
+	height:54px;
+	font-size:16px;
+	color:#fff;
+	border-color:#fc8026;
+	background-color:#fc8026; 
+	margin-top:10px;
+}
+.btn:hover{
+	border-color:#ed751f;
+	background-color:#ed751f;
+}

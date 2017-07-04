@@ -1,0 +1,16 @@
+.Hui-article{
+	top:0;
+}
+
+.unit{
+	position:absolute;
+
+}
+.unit-man{
+	left: 20px;
+	top: 60px;
+}
+.unit-date{
+	right: 40px;
+	bottom: 80px;
+}

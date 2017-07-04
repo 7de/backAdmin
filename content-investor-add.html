@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="/favicon.ico" >
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5shiv.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+
+    <![endif]-->
+    <link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/h-ui.admin/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="static/modify/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="static/modify/css/style.css" />
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>新建题目-云端</title>
+</head>
+<body>
+<div class="page-box-two bg-f2f2f2">
+    <!-- 面包屑 -->
+    <nav class="breadcrumb breadcrumb2"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 平台内容管理 <span class="c-gray en">&gt; 合格投资者风险测评模板 <span class="c-gray en">&gt;</span> 新建题目</nav>
+    <div class="box-content bg-fff">
+        <div class="box-table" style="width:65%">
+            <table class="table table-subject" id="add-table">
+                <thead>
+                    <tr>
+                        <th class="text-r" width="80">题目标题：</th>
+                        <th colspan="3"><input class="input-text radius" type="text" name="title"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-r"><b>选项A：</b></td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                        <td class="text-r">分值:</td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-r"><b>选项B：</b></td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                        <td class="text-r">分值:</td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-r"><b>选项C：</b></td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                        <td class="text-r">分值:</td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-r"><b>选项D：</b></td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                        <td class="text-r">分值:</td>
+                        <td><input class="input-text radius" type="text" name="title"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mt-50 mb-20 text-c">
+                <a href="javascript:;" class="btn btn-warning size-L radius" style="padding-left:30px;padding-right:30px;">创建题目</a>
+                <a href="javascript:;" class="btn btn-warning size-L radius ml-20" id="addBtn" style="padding-left:30px;padding-right:30px;">新增选项</a>
+                <a href="content-investor.html" class="btn btn-default size-L radius ml-20" style="padding-left:30px;padding-right:30px;">返回</a>
+            </p>
+        </div>
+    </div>
+    <div class="box-footer">
+        <p>©2010-2017 云端 · 私募荟 版权所有</p>
+    </div>
+</div>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="static/modify/js/common.js"></script>
+<script>
+$(function(){
+	$('#addBtn').click(function(){
+		var order = $('#add-table tbody tr').last().find('td:first b').text(),
+	    orderArr = order.split('');
+		orderArr[2]= String.fromCharCode(order.charCodeAt(2)+1);
+		var newOrder = orderArr.join('');
+		var addCon='<tr>\
+                        <td class="text-r"><b>'+ newOrder +'</b></td>\
+                        <td><input class="input-text radius" type="text" name="title"></td>\
+                        <td class="text-r">分值:</td>\
+                        <td><input class="input-text radius" type="text" name="title"></td>\
+                    </tr>';
+         $('#add-table tbody').append(addCon);
+	})
+})
+</script>
+
+</body>
+</html>

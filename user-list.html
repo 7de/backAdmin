@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="/favicon.ico" >
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5shiv.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+
+    <![endif]-->
+    <link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/h-ui.admin/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="static/modify/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="static/modify/css/style.css" />
+
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>投资用户列表-云端</title>
+</head>
+<body>
+<div class="page-box-two bg-f2f2f2">
+    <!-- 面包屑 -->
+    <nav class="breadcrumb breadcrumb2"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt; 投资用户列表</nav>
+    <div class="box-content bg-fff">
+        <div class="search-box cl">
+            <label class="search-label mr-5 f-l" for="">用户名：</label>
+            <input class="input-text radius" type="text" name="search-con" placeholder="请输入用户手机号/身份证号码">
+            <input type="button" name="file-1" class="search-btn" value="搜索">
+        </div>
+        <div class="box-table mt-30">
+            <table class="table table-border table-bordered table-hover">
+                <thead class="text-c">
+                    <tr>
+                        <th width="100">序号</th>
+                        <th width="100">姓名</th>
+                        <th>身份证号</th>
+                        <th width="100">评测分数</th>
+                        <th width="100">注册时间</th>
+                        <th width="130">历史累计投资金额(万元)</th>
+                        <th width="130">历史累计投资项目(个)</th>
+                        <th width="100">绑定手机</th>
+                        <th >操作</th>
+                    </tr>
+                </thead>
+                <tbody class="text-c">
+                    <tr>
+                        <td>2</td>
+                        <td class="td-name">陈默</td>
+                        <td>425844100000000000</td>
+                        <td>73</td>
+                        <td>2016.6.6</td>
+                        <td>300万元</td>
+                        <td>2</td>
+                        <td class="td-phone">13666666666</td>
+                        <td class="td-manage">
+                            <a href="user-list-info.html">查看</a>
+                            <a class="ml-10" href="javascript:;" onclick="send_SMS(this,'123')">发短信</a>
+                            <a class="ml-10" href="javascript:;" onclick="resize_password(this,'123')">重置密码</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-20 text-r">
+            <a class="ml-5" href="">首页</a>
+            <a class="ml-5" href="">上一页</a>
+            <a class="ml-5" href="">下一页</a>
+            <a class="ml-5" href="">末页</a>
+            <span class="ml-5">共43页</span>
+            <span class="total-record ml-5">424条记录</span>
+            <span class="ml-5">转到 <input style="width: 3%;" class="input-text radius text-c" type="text">页</span>
+            <a class="ml-5" href="">GO</a>
+        </div>
+    </div>
+    <div class="box-footer">
+        <p>©2010-2017 云端 · 私募荟 版权所有</p>
+    </div>
+</div>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="static/modify/js/common.js"></script>
+<script type="text/javascript">
+//发送短信
+function send_SMS(obj,id){
+    var phone = $(obj).parents('tr').find('.td-phone').text(),
+        layCon = '<form class="layui-form bomb-form" action="" method="" id="sendPassform">\
+                      <div class="layui-form-item" style="margin-bottom: -20px;">\
+                          <label class="layui-form-label">发件人：</label>\
+                          <div class="layui-input-block">\
+                              <input type="text" name="" autocomplete="off" class="layui-input radius" readonly value="云端·私募荟">\
+                          </div>\
+                      </div>\
+                      <div class="layui-form-item">\
+                          <label class="layui-form-label" for="sendphone">手机号码：</label>\
+                          <div class="layui-input-block">\
+                              <input type="text" name="sendphone" id="sendphone" placeholder="请输入手机号码" value="'+ phone +'" autocomplete="off" class="layui-input radius">\
+                          </div>\
+                      </div>\
+                      <div class="layui-form-item">\
+                          <label class="layui-form-label" for="sendcon">内容：</label>\
+                          <div class="layui-input-block">\
+                              <textarea name="sendcon" id="sendcon" cols="" rows="4" maxlength="300" class="textarea radius" placeholder="说点什么..."></textarea>\
+                              <p class="c-999 f-12 mt-5">只能输入300字符</p>\
+                          </div>\
+                      </div>\
+                      <p class="error-box error-box-send"></p>\
+                    </form>';
+
+        layer.open({
+            type: 1 
+            ,area: ['460px']
+            ,title: '发送短信'
+            ,maxmin: false
+            ,anim: 1 
+            ,move:false
+            ,content: layCon
+            ,btn: ['确认']
+            ,yes: function(index){
+                var sendVali = $('#sendPassform').validate({
+                        rules:{
+                            sendphone:{
+                                required:true,
+                                isMobile:true
+                            },
+                            sendcon:'required'
+                        },
+                        messages:{
+                            sendphone:{
+                                required:'请输入手机号码',
+                                isMobile:'请输入正确的手机号码'
+                            },
+                            sendcon:'请输入内容'
+                        },
+                        groups:{
+                            sendPass:'sendphone sendcon'
+                        },
+                        errorPlacement:function(error,element){
+                            $('.error-box-send').append(error);
+                        },
+                        onfocusout:function(element){
+                            $(element).valid();
+                        },
+                        onsubmit:false,
+                        focusCleanup:true
+                });
+                if(sendVali.element('#sendphone') && sendVali.element('#sendcon')){
+                    layer.close(index);
+                    layer.open({
+                      type: 1
+                      ,area: ['460px']
+                      ,title: ''
+                      ,maxmin: false
+                      ,move:false
+                      ,anim: 1 
+                      ,content: '<div class="layer-tip layer-tip2"><i class="ico-global ico-ok"></i><p class="p2 mt-35">短信发送成功！</p></div>'
+                      ,btn: ['确认']
+                      ,yes: function(index){layer.close(index)}
+                    });
+                }
+            
+
+            }
+        });   
+}
+//重置密码
+function resize_password(obj,id){
+    var layTitle = $(obj).parents('tr').find('.td-name').text();
+    layer.open({
+          type: 1 ,
+          area: ['460px'],
+          title: '重置密码？',
+          maxmin: false,
+          anim: 1 ,
+          content: '<div class="layer-tip"><p class="p2 pl-15 pr-15">是否确定重置用户“<b>' + layTitle + '</b>”账户登录密码，点击“确定”，重置密码将发送至会员账号绑定的手机。</p></div>'
+          ,btn: ['确认', '取消']
+          ,yes: function(index){
+            layer.close(index);
+            layer.msg('已发送！',{time:1000});
+          }
+        });
+}
+</script>
+</body>
+</html>
